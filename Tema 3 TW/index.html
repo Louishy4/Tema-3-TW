@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Proiect TW</title>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<section class="header">
+
+   <div class="flex">
+      <a href="#home" class="logo">Restaurant</a>
+      
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
+
+   <nav class="navbar">
+      <a href="#home">acasa</a>
+      <a href="#about">despre</a>
+      <a href="#contact">contact</a>  
+   </nav>
+
+</section>
+
+<!-- header section ends -->
+
+
+<div class="container">
+   <img src="images/pizza.png" data-speed="6" class="parallax earth" alt="" >
+   <img src="images/stars.png" data-speed="-2" class="parallax stars" alt="">
+</div>
+
+<script>
+ 
+let container = document.querySelector('.container');
+
+container.onmousemove = (e) =>{
+  container.querySelectorAll('.parallax').forEach(parallax =>{
+     let speed = parallax.getAttribute('data-speed');
+     let x = (window.innerWidth - e.pageX * speed) / 50;
+     let y = (window.innerHeight - e.pageY * speed) / 50;
+     parallax.style.transform = `translateX(${x}px) translateY(${y}px)`;
+     container.style.backgroundPosition = `${x}% ${y}%`;
+  });
+};
+
+
+</script>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="swiper home-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="box swiper-slide">
+            <img src="images/restaurant.jpg" alt="">
+            <div class="flex">
+               <h3>restaurant </h3>
+               <a href="#contact" class="btn">contact</a>
+            </div>
+         </div>
+
+         <div class="box swiper-slide">
+            <img src="images/restaurant2.jpg" alt="">
+            <div class="flex">
+               <h3>mancare si bauturi</h3>
+               <a href="#contact" class="btn">contact</a>
+            </div>
+         </div>
+
+         <div class="box swiper-slide">
+            <img src="images/restaurant3.jpg" alt="">
+            <div class="flex">
+               <h3>decor de poveste</h3>
+               <a href="#contact" class="btn">contact</a>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <div class="row">
+      <div class="image">
+         <img src="images/personal.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Personal amabil</h3>
+         <p>La restaurantul nostru, suntem mândri de personalul nostru dedicat și pasionat, care face tot posibilul pentru a vă oferi <br>
+            o experiență culinară memorabilă. De la managerul nostru expert în organizarea evenimentelor la bucătarii noștri talentați și <br>
+            ospătarii noștri prietenoși și atenți, fiecare membru al echipei noastre lucrează într-un mod coordonat și eficient pentru a vă oferi<br>
+             cele mai bune servicii și cele mai delicioase preparate, într-un ambient confortabil și plăcut. Indiferent dacă doriți să luați o cină <br>
+             romantică în doi sau să organizați o petrecere specială, vă asigurăm că personalul nostru vă va întâmpina cu zâmbetul pe buze și vă va oferi experiența gastronomică pe care o meritati.</p>
+         <a href="#contact" class="btn">contact</a>
+      </div>
+   </div>
+
+   <div class="row revers">
+      <div class="image">
+         <img src="images/mancare.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>Mancare delicioasa</h3>
+         <p>Intră într-o experiență culinară de neuitat la restaurantul nostru, unde fiecare ingredient este atent selecționat și gătit cu măiestrie <br>
+            pentru a oferi un gust deosebit și o plăcere autentică pentru simțurile tale, astfel încât fiecare mușcătură să fie o călătorie în lumea<br>
+             gustului și a aromelor, iar fiecare masă să fie o poveste memorabilă.</p>
+         <a href="#contact" class="btn">contact</a>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="image">
+         <img src="images/restaurant.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>Decor de poveste</h3>
+         <p>Descoperă un univers de eleganță și rafinament la restaurantul nostru, unde fiecare detaliu al decorului este atent ales pentru a crea o atmosferă<br>
+             deosebită și a te transpune într-un spațiu de poveste, cu lumini calde și decorative, culori armonioase și o combinație subtilă între elemente<br>
+              moderne și tradiționale, astfel încât să te simți într-un loc special, unde momentele petrecute alături de cei dragi sunt întotdeauna memorabile și unice.</p>
+         <a href="#contact" class="btn">contact</a>
+      </div>
+   </div>
+
+</section>
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services">
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/icon-1.png" alt="">
+         <h3>Mancare si Bauturi</h3>
+         <p>Gustă deliciile pregătite cu pasiune și savurează băuturile răcoritoare și rafinate la restaurantul nostru, unde <br>
+            fiecare ingrediente este atent selecționat pentru a-ți oferi o experiență culinară de neuitat.</p>
+      </div>
+
+      <div class="box">
+         <img src="images/icon-2.png" alt="">
+         <h3>Terasa</h3>
+         <p>Relaxează-te în aer liber și bucură-te de momente de neuitat pe terasa noastră, unde poți savura delicii culinare și băuturi răcoritoare într-un cadru plăcut și intim.</p>
+      </div>
+
+      <div class="box">
+         <img src="images/icon-4.png" alt="">
+         <h3>Decor</h3>
+         <p>Bucură-te de o ambianță deosebită la restaurantul nostru, unde fiecare detaliu este atent ales pentru a-ți oferi o experiență culinară memorabilă și o atmosferă plăcută.</p>
+      </div>
+   
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+   <div class="swiper gallery-slider">
+      <div class="swiper-wrapper">
+         <img src="images/restaurant.jpg" class="swiper-slide" alt="">
+         <img src="images/mancare.jpg" class="swiper-slide" alt="">
+         <img src="images/restaurant2.jpg" class="swiper-slide" alt="">
+         <img src="images/personal.png" class="swiper-slide" alt="">
+         <img src="images/restaurant3.jpg" class="swiper-slide" alt="">
+         
+      </div>
+      <div class="swiper-pagination"></div>
+   </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <div class="row">
+
+      <form action="" method="post">
+         <h3>trimite-ne un mesaj</h3>
+         <input type="text" name="name" required maxlength="50" placeholder="nume" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="e-mail" class="box">
+         <input type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="numar de telefon" class="box">
+         <textarea name="msg" class="box" required maxlength="1000" placeholder="mesaj" cols="30" rows="10"></textarea>
+         <input type="submit" value="trimite" name="send" class="btn">
+      </form>
+
+      <div class="faq">
+         <iframe src="https://www.google.com/maps/d/embed?mid=18VjMcy8azdfkHgsgG7kgKdy1s1Q&hl=ro&ehbc=2E312F" width="640" height="480"></iframe>
+
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="reviews" id="reviews">
+
+   <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+         <div class="swiper-slide box">
+            <img src="images/pic-1.png" alt="">
+            <h3>Ripeanu Louis</h3>
+            <p>Am avut o experiență culinară extraordinară la acest restaurant. De la momentul în care am intrat,<br>
+                atmosfera a fost una plăcută și relaxantă, iar personalul a fost extrem de primitor și prietenos.</p>
+         </div>
+         <div class="swiper-slide box">
+            <img src="images/pic-2.png" alt="">
+            <h3>Popa Vlad</h3>
+            <p>Meniul este variat și interesant, cu o selecție excelentă de feluri principale și deserturi delicioase.</p>
+         </div>
+         <div class="swiper-slide box">
+            <img src="images/pic-6.png" alt="">
+            <h3>Popescu Ion</h3>
+            <p>Ambianța intimă și lumina ambientală a restaurantului au adăugat o notă romantică în seara noastră, făcând din această experiență unul dintre cele mai memorabile cine romantice pe care le-am avut.</p>
+         </div>
+         <div class="swiper-slide box">
+            <img src="images/pic-5.jpg" alt="">
+            <h3>Maria</h3>
+            <p>Recomand cu căldură restaurantul tuturor celor care caută o experiență culinară deosebită.</p>
+         </div>
+         <div class="swiper-slide box">
+            <img src="images/pic-4.jpg" alt="">
+            <h3>Andrei</h3>
+            <p>Ambianța a fost foarte plăcută, cu decor modern și elegant, iar personalul a fost extrem de prietenos și atent la nevoile noastre.</p>
+         </div>
+         <div class="swiper-slide box">
+            <img src="images/pic-6.png" alt="">
+            <h3>Vali</h3>
+            <p>Mâncarea a fost absolut delicioasă și proaspăt preparată, cu ingrediente de înaltă calitate. </p>
+         </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+   </div>
+
+</section>
+
+<!-- reviews section ends  -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <a href="tel:0712345678"><i class="fas fa-phone"></i> 0712345678</a>
+         
+         <a href="mailto:ripeanu.louis.j9w@student.ucv.ro"><i class="fas fa-envelope"></i> ripeanu.louis.j9w@student.ucv.ro</a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i> Craiova, Romania - 200123</a>
+      </div>
+
+      <div class="box">
+         <a href="#home">acasa</a>
+         <a href="#about">despre</a>
+         
+         <a href="#gallery">galerie</a>
+         <a href="#contact">contact</a>
+         <a href="#reviews">reviews</a>
+      </div>
+
+      <div class="box">
+         <a href="#">facebook <i class="fab fa-facebook-f"></i></a>
+         <a href="#">twitter <i class="fab fa-twitter"></i></a>
+         <a href="#">instagram <i class="fab fa-instagram"></i></a>
+         <a href="#">linkedin <i class="fab fa-linkedin"></i></a>
+      </div>
+
+   </div>
+
+   <div class="credit">&copy; copyright @ Ripeanu Louis Andrei, ISM 4.1.B-Proiect TW </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
